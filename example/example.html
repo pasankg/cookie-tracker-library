@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test</title>
+  <script src="../cookie-lib.js"></script>
+</head>
+<body>
+<h1>Hello there</h1>
+<p>Check out the console log</p>
+</body>
+<script type="text/javascript">
+  // Create an instance of the library
+  let cookieMgr = new CookieManager();
+
+  // Trigger events
+  cookieMgr.track('view', {experience: 'A'});
+  cookieMgr.track('click', {experience: 'B'});
+  cookieMgr.track('signup', {experience: 'C'});
+
+  // See the results
+  console.log(cookieMgr.getCookie());
+
+</script>
+</html>
